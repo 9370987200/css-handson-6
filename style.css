@@ -1,3 +1,6 @@
+nav {
+    display: flex;
+}
 #nav_left {
     display: inline-block;
     margin: 1rem 0rem 0rem 3rem;
@@ -9,14 +12,83 @@
 div {
     display: block;
 }
-.box {
-    margin: 1rem;
-    width: 17rem;
-    height: 17rem;
-}
-.box_text{
-    padding: 5px 5px;
+
+#nav_right a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
     color: white;
+    
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    display: block;
+    padding-left: 700px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+#nav_right li {
+    text-align: center;
+    display: inline;
+    margin: 1rem;
+}
+#part_A span {
+    font-size: 80px;
+    color: white;
+    font-weight: bold;
+     padding: 50px 40px;
+
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: white;
+    padding: 30px 30px;
+    font-style: italic;
+}
+#btn {
+    background-color: white;
+    font-size: 15px;
+    font-style: italic;
+    border: 1px solid white;
+    padding: 1rem 4rem;
+    border-radius: 30px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: font-size 1s;
+    margin-left: 30px;
+}
+
+button {
+    display: inline-block;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    
+    
+    padding: 1px 6px;
+    border-width: 2px;
+    border-color: buttonborder;
+   
+}
+#container {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+}
+
+#part_B {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
 }
 .box {
     margin: 1rem;
@@ -25,6 +97,12 @@ div {
     position: relative;
     transition: width 1s,height 1s, bottom 1s,position 1s;
 }
+
+.box_text{
+    padding: 5px 5px;
+    color: white;
+}
+
 #box1::before {
     background: url(./img1.jpg);
     background-size: cover;
@@ -41,10 +119,7 @@ div {
     background: url(./image2.png);
     background-size: cover;
 }
-@media only screen and (max-width: 850px) and (min-width: 600px)
-.box::before {
-    background-repeat: no-repeat;
-}
+
 .box::before {
     content: ' ';
     position: absolute;
@@ -69,141 +144,50 @@ div {
     cursor: pointer;
     transition: font-size 1s;
 }
-button
-button {
-    appearance: auto;
-    writing-mode: horizontal-tb !important;
-    font-style: ;
-    font-variant-ligatures: ;
-    font-variant-caps: ;
-    font-variant-numeric: ;
-    font-variant-east-asian: ;
-    font-weight: ;
-    font-stretch: ;
-    font-size: ;
-    font-family: ;
-    text-rendering: auto;
-    color: buttontext;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: center;
-    align-items: flex-start;
-    cursor: default;
-    box-sizing: border-box;
-    background-color: buttonface;
-    margin: 0em;
-    padding: 1px 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonborder;
-    border-image: initial;
+body {
+    background-image: url(./img7.jpg);
+    height: 100%;
+    position: relative;
+    width: 100%;
 }
-#part_B {
+
+    
+
+
+.box:hover {
+    transform: scale(1.1);
+}
+#btn:hover {
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 850px) and (min-width: 600px)
+{
+#container {
     display: grid;
-    grid-template-columns: repeat(2,auto);
+    grid-template-columns: repeat(1,auto);
+}
 }
 @media only screen and (max-width: 850px) and (min-width: 600px)
+{
 #part_B {
     display: grid;
     grid-template-columns: repeat(1,auto);
     justify-content: center;
 }
-#nav_right a {
-    text-decoration: none;
-    text-align: center;
-    font-size: 1.5rem;
-    color: white;
-    transition: font-size 1s;
 }
-#nav_right li {
-    text-align: center;
-    display: inline;
-    margin: 1rem;
-    
-
-}
-#nav_right ul {
-    display: block;
-    padding-left: 700px;
-}
-#nav_right ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
-#part_A span {
-    font-size: 80px;
-    color: white;
-    font-weight: bold;
-    transition: font-size 1s;
-    padding: 50px 40px;
-
-}
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    color: white;
-    padding: 30px 30px;
-}
-nav {
-    display: flex;
-}
-body{
-    background-image: url(./img7.jpg);
-    height: 100% ;
-    width: 100%;
-    
-   
-}
-
-
-
-#container {
+@media only screen and (max-width: 599px) and (min-width: 100px)
+{
+#part_B {
     display: grid;
-    grid-template-columns: repeat(2,auto);
-    
+    grid-template-columns: repeat(1,auto);
+    justify-content: center;
 }
-#btn {
-    background-color: white;
-    font-size: 11px;
-    font-weight: bold;
-    border: 1px solid white;
-    padding: 1rem 4rem;
-    border-radius: 30px;
-    margin-top: 1rem;
-    cursor: pointer;
-    transition: font-size 1s;
-    margin-left: 30px;
 }
-.box:hover {
-    width: 18rem;
-    height: 18rem;
-    position: relative;
-    bottom: 1rem;
-}
-#btn:hover {
-    font-size: 25px;
-}
-
-@media only screen and (max-width: 850px) and (min-width: 600px)
+@media only screen and (max-width: 599px) and (min-width: 100px)
+{
 #container {
     display: grid;
     grid-template-columns: repeat(1,auto);
+}
 }
